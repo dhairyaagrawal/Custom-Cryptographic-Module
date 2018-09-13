@@ -1,0 +1,30 @@
+// $Id: $
+// File name:   rcon.sv
+// Created:     4/21/2018
+// Author:      Dhairya Agrawal
+// Lab Section: 337-05
+// Version:     1.0  Initial Design Entry
+// Description: Round constant LUT for key scheduling (core)
+
+module rcon
+(
+	input logic [3:0] roundNumber,
+	output logic [7:0] out
+);
+
+	wire [3:0] rcon_table [9:0];
+
+	assign rcon_table[4'h0] = 4'h01;
+	assign rcon_table[4'h1] = 4'h02;
+	assign rcon_table[4'h2] = 4'h04;
+	assign rcon_table[4'h3] = 4'h08;
+	assign rcon_table[4'h4] = 4'h10;
+	assign rcon_table[4'h5] = 4'h20;
+	assign rcon_table[4'h6] = 4'h40;
+	assign rcon_table[4'h7] = 4'h80;
+	assign rcon_table[4'h8] = 4'h1B;
+	assign rcon_table[4'h9] = 4'h36;
+
+	assign out = rcon_table[roundNumber];
+
+endmodule

@@ -1,0 +1,34 @@
+// $Id: $
+// File name:   tb_keyScheduleCore.sv
+// Created:     4/22/2018
+// Author:      Dhairya Agrawal
+// Lab Section: 337-05
+// Version:     1.0  Initial Design Entry
+// Description: test bench for keyschedulecore
+
+module tb_keyScheduleCore();
+logic [4:0] tb_rc;
+logic [31:0] inword;
+logic [31:0] outword;
+
+// Portmap
+keyScheduleCore U1
+(
+	.inputWord(inword),
+	.roundNumber(tb_rc),
+	.outputWord(outword)
+);
+
+initial begin
+	#5;
+	inword = 32'h1D2C3A4F;
+	tb_rc = 1;
+
+	#100;
+	if(1) begin
+		$info("WE ARE SMART :)");
+	end
+
+end
+
+endmodule

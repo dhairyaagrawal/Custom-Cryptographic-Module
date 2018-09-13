@@ -1,0 +1,16 @@
+// $Id: $
+// File name:   tb_s_box_16.sv
+// Created:     4/16/2018
+// Author:      Ryan Devlin
+// Lab Section: 337-05
+// Version:     1.0  Initial Design Entry
+// Description: Test Bench for s_box_four.
+
+module tb_s_box_16(
+	//input wire [127:0] test,
+	output wire [127:0] out
+);
+	reg [127:0] test = 128'h000102030405060708090a0b0c0d0e0f;
+
+	s_box_16 DUT (.in_data(test), .out_data(out));
+endmodule
