@@ -13,7 +13,7 @@ This repository conatins verilog code for a Custom Cryptographic module.  When S
 
 ## **NOTE
 
-Some of the build scripts and synthesis files for this project were written by Purdue University and are currently proprietary information. All functionality and design for the processor is posted here and was written by myself and my team.
+Some of the build scripts and synthesis files for this project were written by Purdue University and are currently proprietary information. All functionality and design code for the processor is posted here and was written by myself and my team.
 
 ## Built With
 
